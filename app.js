@@ -1,14 +1,15 @@
-const express = require('express')
-const app = express()
-const port = 3000
-const Controller = require('./controllers')
+const express = require("express");
+const app = express();
+const port = 3000;
+const doctorRoute = require("./routers/doctorRoute")
 
-app.set('view engine', 'pug')
-app.use(express.urlencoded({extended:false}));
+app.set("view engine", "ejs");
 
+app.use(express.urlencoded({extended:true}));
 // app.get('/', Controller.home)
 // app.get('/login')
 // app.get('/logout')
+app.use("/doctor",doctorRoute);
 app.get("/penyakit", Controller.penyakit)
 // app.get('/register')
 // app.post('/register')
@@ -20,6 +21,6 @@ app.get("/penyakit", Controller.penyakit)
 // app.get('/doctor/:id/editpenyakit', )
 // app.post('/doctor/:id/editpenyakit', )
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+app.listen(port, ()=>{
+    console.log("connect");
 })
