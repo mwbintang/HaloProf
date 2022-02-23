@@ -16,15 +16,7 @@ module.exports = {
     data.forEach(el=>{
       el.createdAt = new Date()
       el.updatedAt = new Date()
-      bcrypt.hash(el.password, 10)
-      .then((result)=>{
-       //  console.log(result)
-        el.password = result
-        return el.password = result
-      })
-      .catch(err=>{
-        console.log(err)
-      })
+      el.password = bcrypt.hashSync(el.password, 10)
     })
     return queryInterface.bulkInsert('Doctors', data, {})
   },

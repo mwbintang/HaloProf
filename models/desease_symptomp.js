@@ -11,11 +11,29 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      desease_symptomp.belongsTo(models.Desease, {foreignKey: 'deseaseId'})
+      desease_symptomp.belongsTo(models.Symptomp, {foreignKey: 'symptompId'})
     }
   }
   desease_symptomp.init({
-    deseaseId: DataTypes.INTEGER,
-    symptompId: DataTypes.INTEGER
+    deseaseId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "Deseases",
+        key: "id",
+      },
+      onUpdate: "CASCADE",
+      onDelete: "CASCADE",
+    },
+    symptompId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "Symptomps",
+        key: "id",
+      },
+      onUpdate: "CASCADE",
+      onDelete: "CASCADE",
+    }
   }, {
     sequelize,
     modelName: 'desease_symptomp',
