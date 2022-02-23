@@ -1,41 +1,35 @@
 'use strict';
 const fs = require('fs')
 const bcrypt = require('bcrypt')
-let data = JSON.parse(fs.readFileSync('./data/user.json','utf8'))
-let newData = data.map(el=>{
-  // el.createdAt = new Date()
-  // el.updatedAt = new Date()
-  bcrypt.hash(el.password, 10)
-.then((result)=>{
-  console.log(result)
-  return result
-})
-.catch(err=>{
-  console.log(err)
-})
-})
-console.log(newData)
-module.exports = {
-  up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
-     return queryInterface.bulkInsert('Users', data, {})
-  },
+let data = JSON.parse(fs.readFileSync('./data/user.json', 'utf8'));
 
-  down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
-     return queryInterface.bulkDelete('Users', data, {})
-  }
+module.exports = {
+	up(queryInterface, Sequelize) {
+		/**
+		 * Add seed commands here.
+		 *
+		 * Example:
+		 * await queryInterface.bulkInsert('People', [{
+		 *   name: 'John Doe',
+		 *   isBetaMember: false
+		 * }], {});
+		*/
+		data.forEach(el => {
+			el.createdAt = new Date()
+			el.updatedAt = new Date()
+			el.password = bcrypt.hashSync(el.password, 10)
+			console.log(el.password);
+		})
+		return queryInterface.bulkInsert('Users', data, {})
+	},
+
+	down(queryInterface, Sequelize) {
+		/**
+		 * Add commands to revert seed here.
+		 *
+		 * Example:
+		 * await queryInterface.bulkDelete('People', null, {});
+		 */
+		return queryInterface.bulkDelete('Users', data, {})
+	}
 };
