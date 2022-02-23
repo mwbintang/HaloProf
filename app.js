@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const Controller = require('./controllers')
 const doctorRoute = require("./routers/doctorRoute")
 
 app.set("view engine", "ejs");
