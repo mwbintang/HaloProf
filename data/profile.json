@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Mahmudin Bayangkara",
+    "UserId": 1,
+    "age": 15,
+    "gender": "Male"
+  },
+  {
+    "name": "Karina Maharani",
+    "UserId": 2,
+    "age": 20,
+    "gender": "Female"
+  },
+  {
+    "name": "Maiden Kristina",
+    "UserId": 3,
+    "age": 50,
+    "gender": "Female"
+  },
+  {
+    "name": "Jamaludin Samudra",
+    "UserId": 4,
+    "age": 28,
+    "gender": "Male"
+  },
+  {
+    "name": "Paijo Pangestu",
+    "UserId": 5,
+    "age": 19,
+    "gender": "Male"
+  }
+]
