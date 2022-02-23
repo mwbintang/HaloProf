@@ -1,20 +1,7 @@
 'use strict';
 const fs = require('fs')
 const bcrypt = require('bcrypt')
-let data = JSON.parse(fs.readFileSync('./data/user.json','utf8'))
-let newData = data.map(el=>{
-  // el.createdAt = new Date()
-  // el.updatedAt = new Date()
-  bcrypt.hash(el.password, 10)
-.then((result)=>{
-  console.log(result)
-  return result
-})
-.catch(err=>{
-  console.log(err)
-})
-})
-console.log(newData)
+// console.log(newData)
 module.exports = {
   up (queryInterface, Sequelize) {
     /**
@@ -25,8 +12,25 @@ module.exports = {
      *   name: 'John Doe',
      *   isBetaMember: false
      * }], {});
-    */
-     return queryInterface.bulkInsert('Users', data, {})
+     */
+   let data = JSON.parse(fs.readFileSync('./data/user.json','utf8'))
+   // let newData = []
+   let newData = data.map(el=>{
+     // console.log(el)
+     // el.createdAt = new Date()
+     // el.updatedAt = new Date()
+     bcrypt.hash(el.password, 10)
+   .then((result)=>{
+     // console.log(result)
+   
+     return ({username:el.username, email:el.email, password: result, profileId:el.profileId, createdAt:new Date(), updatedAt:new Date()})
+   })
+   .then()
+   .catch(err=>{
+     console.log(err)
+   })
+   })
+     return queryInterface.bulkInsert('Users', newData, {})
   },
 
   down (queryInterface, Sequelize) {

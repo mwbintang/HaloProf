@@ -1,19 +1,6 @@
 'use strict';
 const fs = require('fs')
 const bcrypt = require('bcrypt')
-let data = JSON.parse(fs.readFileSync('./data/docter.json','utf8'))
-data.forEach(el=>{
-  el.createdAt = new Date()
-  el.updatedAt = new Date()
-  bcrypt.hash(el.password, 10)
-  .then((result)=>{
-   //  console.log(result)
-    el.password = result
-  })
-  .catch(err=>{
-    console.log(err)
-  })
-})
 module.exports = {
   up (queryInterface, Sequelize) {
     /**
@@ -24,8 +11,22 @@ module.exports = {
      *   name: 'John Doe',
      *   isBetaMember: false
      * }], {});
-    */
-   return queryInterface.bulkInsert('Doctors', data, {})
+     */
+    let data = JSON.parse(fs.readFileSync('./data/docter.json','utf8'))
+    data.forEach(el=>{
+      el.createdAt = new Date()
+      el.updatedAt = new Date()
+      bcrypt.hash(el.password, 10)
+      .then((result)=>{
+       //  console.log(result)
+        el.password = result
+        return el.password = result
+      })
+      .catch(err=>{
+        console.log(err)
+      })
+    })
+    return queryInterface.bulkInsert('Doctors', data, {})
   },
 
   down (queryInterface, Sequelize) {
