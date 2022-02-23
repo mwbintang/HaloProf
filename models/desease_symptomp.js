@@ -10,28 +10,28 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Desease_Symptomp.belongsTo(models.Desease, {foreignKey: 'deseaseId'})
-      Desease_Symptomp.belongsTo(models.Symptomp, {foreignKey: 'symptompId'})
+      // Desease_Symptomp.belongsTo(models.Desease, {foreignKey: 'deseaseId'})
+      // Desease_Symptomp.belongsTo(models.Symptomp, {foreignKey: 'symptompId'})
     }
   }
   Desease_Symptomp.init({
     deseaseId: {
       type: DataTypes.INTEGER,
-      references: {
-        model: "Deseases",
-        key: "id",
-      },
-      onUpdate: "CASCADE",
-      onDelete: "CASCADE",
+    //   references: {
+    //     model: "Deseases",
+    //     key: "id",
+    //   },
+    //   onUpdate: "CASCADE",
+    //   onDelete: "CASCADE",
     },
     symptompId: {
       type: DataTypes.INTEGER,
-      references: {
-        model: "Symptomps",
-        key: "id",
-      },
-      onUpdate: "CASCADE",
-      onDelete: "CASCADE",
+    //   references: {
+    //     model: "Symptomps",
+    //     key: "id",
+    //   },
+    //   onUpdate: "CASCADE",
+    //   onDelete: "CASCADE",
     }
   }, {
     sequelize,

@@ -1,14 +1,15 @@
 const {checkResult, Desease_Symptomp, Desease, Doctor, Profile, Symptomp, User} = require('../models')
 
-class Controller{
+class deseaseController{
     // static home(req, res){
     //     res.redirect('/login')
     // }
-    static penyakit(req, res){
-        Desease.findAll({include:{model:Desease_Symptomp, include:Symptomp}})
+    static deseaseList(req, res){
+        console.log('test')
+        Desease.findAll({include:{all: true, nested: true }})
             .then(result=>{
-                console.log(result[0].Desease_Symptomps[0].Symptomp)
-                res.render('penyakit', {result})
+                console.log(result[1].Symptomps)
+                res.render('deseaseList', {result})
             })
             .catch(err=>{
                 res.send(err)
@@ -16,4 +17,4 @@ class Controller{
     }
 }
 
-module.exports = Controller;
+module.exports = deseaseController;

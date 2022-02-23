@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-const Controller = require('./controllers')
+const Controller = require('./controllers/deseaseController')
 const doctorRoute = require("./routers/doctorRoute")
+const deseaseRoute = require("./routers/deseaseRoute")
 
 app.set("view engine", "ejs");
 
@@ -11,7 +12,7 @@ app.use(express.urlencoded({extended:true}));
 // app.get('/login')
 // app.get('/logout')
 app.use("/doctor",doctorRoute);
-app.get("/penyakit", Controller.penyakit)
+app.use("/penyakit", deseaseRoute)
 // app.get('/register')
 // app.post('/register')
 // app.get('/user/:id/', )
@@ -19,8 +20,8 @@ app.get("/penyakit", Controller.penyakit)
 // app.get('/doctor/:Id', )
 // app.get('/doctor/:id/checkresult/add', )
 // app.post('/doctor/:id/checkresult/add', )
-// app.get('/doctor/:id/editpenyakit', )
-// app.post('/doctor/:id/editpenyakit', )
+// app.get('/penyakit/editpenyakit', )
+// app.post('/penyakit/editpenyakit', )
 
 app.listen(port, ()=>{
     console.log("connect");
