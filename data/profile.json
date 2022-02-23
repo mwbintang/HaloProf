@@ -1,31 +1,31 @@
 [
   {
-    "name": "Mahmudin Bayangkara",
-    "UserId": 1,
+    "firstName": "Mahmudin" ,
+    "lastName":"Bayangkara",
     "age": 15,
     "gender": "Male"
   },
   {
-    "name": "Karina Maharani",
-    "UserId": 2,
+    "firstName": "Karina",
+    "lastName":"Maharani",
     "age": 20,
     "gender": "Female"
   },
   {
-    "name": "Maiden Kristina",
-    "UserId": 3,
+    "firstName": "Maiden", 
+    "lastName":"Kristina",
     "age": 50,
     "gender": "Female"
   },
   {
-    "name": "Jamaludin Samudra",
-    "UserId": 4,
+    "firstName": "Jamaludin", 
+    "lastName":"Samudra",
     "age": 28,
     "gender": "Male"
   },
   {
-    "name": "Paijo Pangestu",
-    "UserId": 5,
+    "firstName": "Paijo", 
+    "lastName":"Pangestu",
     "age": 19,
     "gender": "Male"
   }

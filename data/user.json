@@ -2,26 +2,31 @@
   {
     "username": "mahmud",
     "email": "mahmud@gmail.com",
-    "password": "test1"
+    "password": "test1",
+    "profileId": 1
   },
   {
     "username": "karina",
     "email": "karina@gmail.com",
-    "password": "test2"
+    "password": "test2",
+    "profileId": 2
   },
   {
     "username": "maiden",
     "email": "maiden@gmail.com",
-    "password": "test3"
+    "password": "test3",
+    "profileId": 3
   },
   {
     "username": "jamal",
     "email": "jamal@gmail.com",
-    "password": "test4"
+    "password": "test4",
+    "profileId": 4
   },
   {
     "username": "paijo",
     "email": "paijo@gmail.com",
-    "password": "test5"
+    "password": "test5",
+    "profileId": 5
   }
 ]

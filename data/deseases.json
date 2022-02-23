@@ -1,0 +1,27 @@
+[
+    {
+    "name":"tipes",
+    "description":"gangguan lambung",
+    "level": 1
+    },{
+        "name":"covid",
+        "description":"gangguan virus",
+        "level": 1
+        },{
+            "name":"kanker",
+            "description":"gangguan sel",
+            "level": 5
+            },{
+                "name":"tumor",
+                "description":"gangguan sel",
+                "level": 1
+                },{
+                    "name":"demam berdarah",
+                    "description":"gangguan binatang",
+                    "level": 1
+                    },{
+                        "name":"epilepsi",
+                        "description":"gangguan saraf",
+                        "level": 1
+                        }
+]
