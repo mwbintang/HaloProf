@@ -20,6 +20,10 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
     profileId: DataTypes.INTEGER
   }, {
+    hooks: {
+      beforeCreate: function(user, options) {
+        user.profileId = 1
+      }},
     sequelize,
     modelName: 'User',
   });
