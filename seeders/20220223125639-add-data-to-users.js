@@ -18,7 +18,6 @@ module.exports = {
 			el.createdAt = new Date()
 			el.updatedAt = new Date()
 			el.password = bcrypt.hashSync(el.password, 10)
-			console.log(el.password);
 		})
 		return queryInterface.bulkInsert('Users', data, {})
 	},
