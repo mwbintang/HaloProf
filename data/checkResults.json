@@ -1,0 +1,9 @@
+[
+    {
+        "userId":1,
+        "deseaseId":1,
+        "doctorId":1,
+        "medicine":"yang penting obat",
+        "description": "yang penting olahraga"
+    }
+]

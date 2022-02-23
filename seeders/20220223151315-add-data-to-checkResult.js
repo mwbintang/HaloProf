@@ -1,6 +1,5 @@
 'use strict';
 const fs = require('fs')
-const bcrypt = require('bcrypt')
 module.exports = {
   up (queryInterface, Sequelize) {
     /**
@@ -11,14 +10,13 @@ module.exports = {
      *   name: 'John Doe',
      *   isBetaMember: false
      * }], {});
-     */
-    let data = JSON.parse(fs.readFileSync('./data/docter.json','utf8'))
-    data.forEach(el=>{
-      el.createdAt = new Date()
-      el.updatedAt = new Date()
-      el.password = bcrypt.hashSync(el.password, 10)
-    })
-    return queryInterface.bulkInsert('Doctors', data, {})
+    */
+     let data = JSON.parse(fs.readFileSync('./data/checkResults.json','utf8'))
+     data.forEach(el=>{
+       el.createdAt = new Date()
+       el.updatedAt = new Date()
+     })
+     return queryInterface.bulkInsert('CheckResults', data, {})
   },
 
   down (queryInterface, Sequelize) {
@@ -28,6 +26,6 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-   return queryInterface.bulkDelete('Doctors', null, {})
-  }  
+     return queryInterface.bulkDelete('CheckResults', null, {})
+  }
 };
