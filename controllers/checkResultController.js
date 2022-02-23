@@ -1,5 +1,4 @@
 const { user } = require("pg/lib/defaults");
-const { Model } = require("sequelize/types");
 const {CheckResult,User,Desease,Doctor,Profile} = require("../models/index")
 class checkResultController{
     static showCRForDoctor(req,res){
@@ -7,7 +6,7 @@ class checkResultController{
             {
                 include:[{
                     model:User,
-                    include: [Profile]
+                    include: Profile
                 },{
                     model:Desease
                 },{
@@ -24,7 +23,7 @@ class checkResultController{
         CheckResult.findByPk(id,{
             include:[{
                 model:User,
-                include: [Profile]
+                include: Profile
             },{
                 model:Desease
             },{
