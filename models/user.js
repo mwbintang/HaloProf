@@ -28,6 +28,11 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   }, {
+    hooks: {
+      beforeCreate: function(user, options) {
+        user.role = 'patient'
+      }
+    },
     sequelize,
     modelName: 'User',
   });

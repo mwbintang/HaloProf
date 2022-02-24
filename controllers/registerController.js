@@ -12,7 +12,6 @@ class registerController{
         let result
             bcrypt.hash(password, 10)
                 .then((data)=>{
-                    // console.log(data)
                     result = data
                     return Profile.create({
                         firstName,
@@ -21,11 +20,13 @@ class registerController{
                         gender
                         })
                     })
-                .then(()=>{
+                .then((data)=>{
+                    console.log(data)
                     return User.create({
                         username,
                         email,
-                        password: result
+                        password: result,
+                        profileId:data.id
                     })
                 })
                 .then(()=>{
