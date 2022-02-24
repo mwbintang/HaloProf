@@ -68,5 +68,12 @@
     "password" : "dcdfwevcwv",
     "role":"doctor",
     "profileId": 10
+  },
+  {
+    "username" : "sumtin",
+    "email" : "dimasEga@gmail.com",
+    "password" : "123543",
+    "role":"doctor",
+    "profileId": 11
   }
 ]
