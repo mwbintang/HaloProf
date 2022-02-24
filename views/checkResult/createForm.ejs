@@ -7,26 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Create Checkups Record</h1>
+    <h1>Buat Hasil Periksa</h1>
     <form action="/doctor/<%= doctorId %>/checkResult/add" method="post">
-        <label>Patient Name :</label>
+        <label>Nama Pasien :</label>
         <select name="userId">
             <% users.forEach(u => { %>
                 <option value="<%= u.id %> "><%= u.Profile.name %></option>
             <% }) %>
           </select><br><br>
 
-          <label>Diagnostic Result :</label>
+          <label>Hasil Diagnosis :</label>
           <select name="deseaseId">
               <% deseases.forEach(d => { %>
                   <option value="<%= d.id %> "><%= d.name %></option>
               <% }) %>
             </select><br><br>
 
-        <label>Medication :</label><br>
+        <label>Obat :</label><br>
         <input type="text" name="medicine"><br><br>
 
-        <label>Description :</label><br>
+        <label>Deskripsi :</label><br>
         <textarea name="description"></textarea><br><br>
 
         <button type="submit">Submit</button>
