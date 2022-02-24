@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Data Lengkap Pasien</h1>
+    <h6>Nama : <%= user.Profile.name %></h6>
+    <h6>Umur : <%= user.Profile.age %></h6>
+    <h6>Gender : <%= user.Profile.gender %></h6>
+    <h6>History Periksa : </h6> 
+    <table border="1">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Tanggal Periksa</th>
+                <th>Dokter yang Memeriksa</th>
+                <th>Hasil Diagnosa</th>
+                <th>Opsi</th>  
+            </tr>
+        </thead>
+        <tbody>
+            <% let i = 1 %> 
+            <% user.CheckResults.forEach(cr => { %>
+                <tr>
+                    <td><%= i %></td>
+                    <td><%= cr.formatCreatedDate %></td>
+                    <td><%= cr.Doctor.name %></td>
+                    <td><%= cr.Desease.name %></td>
+                    <td>
+                        <a href="/user/<%= user.id %>/checkResult/<%= cr.id %>">Detail</a>
+                    </td>
+                </tr>
+                <% i = i + 1 %> 
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>

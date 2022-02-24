@@ -1,13 +1,14 @@
 const router = require("express").Router();
-const checkResultController = require("../controllers/checkResultController")
+const CheckResultController = require("../controllers/checkResultController")
 
 
 // router.get("/:doctorId", );
-router.get("/:doctorId/checkResult",checkResultController.showCRForDoctor);
+router.get("/:doctorId/checkResult",CheckResultController.showCRForDoctor);
 router.route("/:doctorId/checkResult/add")
-    .get(checkResultController.showCRForm)
-    .post(checkResultController.createCR)
-router.get("/:doctorId/checkResult/:id",checkResultController.showCRDetailForDoctor);
+    .get(CheckResultController.showCRForm)
+    .post(CheckResultController.createCR);
+router.get("/:doctorId/checkResult/delete/:id",CheckResultController.deleteCR);
+router.get("/:doctorId/checkResult/:id",CheckResultController.showCRDetail);
 
 
 module.exports = router;

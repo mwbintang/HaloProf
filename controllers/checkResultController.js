@@ -1,8 +1,9 @@
-const { user } = require("pg/lib/defaults");
 const {CheckResult,User,Desease,Doctor,Profile} = require("../models/index")
 class checkResultController{
     static showCRForDoctor(req,res){
+        let checkResults;
         const doctorId = req.params.doctorId;
+        const where = req.query.doctorId ? { doctorId: req.query.doctorId } : null;
         CheckResult.findAll(
             {
                 include:[{
@@ -12,15 +13,23 @@ class checkResultController{
                     model:Desease
                 },{
                     model:Doctor
-                }]
+                }],
+                where
             }
-        ).then(checkResults => {
-            res.render("checkResult/indexDoctor",{checkResults,doctorId});
+        ).then(cr => {
+            checkResults = cr;
+            return Doctor.findAll();
+        }).then(doctors=>{
+            res.render("checkResult/indexDoctor",{
+                checkResults,
+                doctorId,
+                doctors
+            });
         }).catch(err => res.send(err));
     }
 
-    static showCRDetailForDoctor(req,res){
-        const id = req.params.id;
+    static showCRDetail(req,res){
+        const id = req.params.checkResultId;
         CheckResult.findByPk(id,{
             include:[{
                 model:User,
@@ -56,6 +65,20 @@ class checkResultController{
                 res.redirect(`/doctor/${doctorId}/checkResult`)
             }).catch(err => res.send(err));
     }
+
+    static deleteCR(req,res){
+        const doctorId = req.params.doctorId;
+        const id = req.params.id;
+        CheckResult.destroy({
+            where: {
+                id: id
+              }
+        })
+        .then(()=>{
+            res.redirect(`/doctor/${doctorId}/checkResult`)
+        }).catch(err => res.send(err));
+    }
+
 }
 
 module.exports = checkResultController;

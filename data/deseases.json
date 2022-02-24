@@ -2,31 +2,39 @@
     {
         "name": "tipes",
         "description": "gangguan lambung",
-        "level": 1
+        "level": 1,
+        "SymptompId" : 1
     },
     {
         "name": "covid",
         "description": "gangguan virus",
-        "level": 1
+        "level": 1,
+        "SymptompId" : 2
+        
     },
     {
         "name": "kanker",
         "description": "gangguan sel",
-        "level": 5
+        "level": 5,
+        "SymptompId" : 4
     },
     {
         "name": "tumor",
         "description": "gangguan sel",
-        "level": 1
+        "level": 1,
+        "SymptompId" : 1
     },
     {
         "name": "demam berdarah",
         "description": "gangguan binatang",
-        "level": 1
+        "level": 1,
+        "SymptompId" : 6
     },
     {
         "name": "epilepsi",
         "description": "gangguan saraf",
-        "level": 1
+        "level": 1,
+        "SymptompId" : 5
+        
     }
 ]
