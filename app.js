@@ -13,9 +13,10 @@ app.use(express.urlencoded({extended:true}));
 app.get('/', Controller.home)
 // app.get('/login')
 // app.get('/logout')
-app.use("/doctor", doctorRoute);
+
 app.use("/desease", deseaseRoute)
 app.use('/register', registerRoute)
+app.use("/doctor", doctorRoute);
 app.use("/user",userRoute);
 
 
