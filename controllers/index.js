@@ -2,9 +2,9 @@ class Controller{
     static home(req, res){
         if(req.session.user){
             if(req.session.user.role === "doctor"){
-                res.redirect(`/doctor/${user.id}/checkResult`)
+                res.redirect(`/doctor/${req.session.user.id}/checkResult`)
             }else{
-                res.redirect(`/user/${user.id}`)
+                res.redirect(`/user/${req.session.user.id}`)
             }
         }else{
             res.render('home',{
@@ -22,6 +22,10 @@ class Controller{
     static isUserADoctor(req, res, next){
         if (req.session.user.role !== 'doctor') res.redirect("/?error=anda+bukan+dokter");
         else next()
+    }
+
+    static redirectIfFalse(req,res){
+        
     }
     
 }

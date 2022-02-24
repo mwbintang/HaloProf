@@ -1,20 +1,10 @@
-[
-    {
-        "name": "panas"
-    },
-    {
-        "name": "batuk"
-    },
-    {
-        "name": "sesak"
-    },
-    {
-        "name": "pilek"
-    },
-    {
-        "name": "menggigil"
-    },
-    {
-        "name": "meriang"
-    }
-]
+[{"name":"Proteus infection NOS"},
+{"name":"Fx lower humerus NOS-cl"},
+{"name":"Hx malig neuroendo tumor"},
+{"name":"Hormone replace postmeno"},
+{"name":"Superf inj leg NEC-infec"},
+{"name":"Sat cerv smr-no trnsfrm"},
+{"name":"Radiation exposure NOS"},
+{"name":"Dialysis encounter, NEC"},
+{"name":"Echinococc granul liver"},
+{"name":"TB pneumonia-no exam"}]
