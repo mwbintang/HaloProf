@@ -9,10 +9,17 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
+    get formatCreatedDate(){
+      let date = new Date(this.createdAt);
+      let month =date.getMonth() < 10 ? `0${date.getMonth()}` :  `${date.getMonth()}`;
+      let day = date.getDate() < 10 ? `0${date.getDate()}` :  `${date.getDate()}`;
+      return `${date.getFullYear()}-${month}-${day}`;
+    }
+
     static associate(models) {
-      CheckResult.belongsTo(models.User, { foreignKey:"userId"});
-      CheckResult.belongsTo(models.Desease, { foreignKey:"deseaseId"});
-      CheckResult.belongsTo(models.Doctor, { foreignKey:"doctorId"});
+      CheckResult.belongsTo(models.User, {foreignKey:"userId"});
+      CheckResult.belongsTo(models.Desease, {foreignKey:"deseaseId"});
+      CheckResult.belongsTo(models.Doctor, {foreignKey:"doctorId"});
     }
   }
   CheckResult.init({

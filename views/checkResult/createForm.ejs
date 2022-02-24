@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create Checkups Record</h1>
+    <form action="/doctor/<%= doctorId %>/checkResult/add" method="post">
+        <label>Patient Name :</label>
+        <select name="userId">
+            <% users.forEach(u => { %>
+                <option value="<%= u.id %> "><%= u.Profile.name %></option>
+            <% }) %>
+          </select><br><br>
+
+          <label>Diagnostic Result :</label>
+          <select name="deseaseId">
+              <% deseases.forEach(d => { %>
+                  <option value="<%= d.id %> "><%= d.name %></option>
+              <% }) %>
+            </select><br><br>
+
+        <label>Medication :</label><br>
+        <input type="text" name="medicine"><br><br>
+
+        <label>Description :</label><br>
+        <textarea name="description"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
