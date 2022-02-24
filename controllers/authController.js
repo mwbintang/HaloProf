@@ -122,7 +122,6 @@ class AuthController {
 				return bcrypt.compare(password, user.password);
 			}
 		}).then(result => {
-			console.log(result);
 			if(result === true){
 				req.session.user = user;
 				if(user.role === "doctor"){
