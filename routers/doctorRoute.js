@@ -4,13 +4,16 @@ const userController = require("../controllers/userController");
 
 
 // router.get("/:doctorId", );
-router.get("/:doctorId/checkResult",CheckResultController.showCRForDoctor);
+router.get("/:doctorId/checkResult", CheckResultController.showCRForDoctor);
 router.route("/:doctorId/checkResult/add")
     .get(CheckResultController.showCRForm)
     .post(CheckResultController.createCR);
-router.get("/:doctorId/user/:userId",userController.showUserProfile);
-router.get("/:doctorId/checkResult/delete/:id",CheckResultController.deleteCR);
-router.get("/:doctorId/checkResult/:id",CheckResultController.showCRDetail);
+router.route("/:doctorId/checkResult/edit/:checkResultId")
+    .get(CheckResultController.showCREditForm)
+    .post(CheckResultController.updateCR);
+router.get("/:doctorId/user/:userId", userController.showUserProfile);
+router.get("/:doctorId/checkResult/delete/:checkResultId", CheckResultController.deleteCR);
+router.get("/:doctorId/checkResult/:checkResultId", CheckResultController.showCRDetail);
 
 
 module.exports = router;

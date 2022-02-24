@@ -24,14 +24,14 @@
         </thead>
         <tbody>
             <% let i = 1 %> 
-            <% patient.CheckResults.forEach(cr => { %>
+            <% patient.userRecord.forEach(cr => { %>
                 <tr>
                     <td><%= i %></td>
-                    <td><%= cr.formatCreatedDate %></td>
-                    <td><%= cr.Doctor.name %></td>
+                    <td><%= cr.checkupDate %></td>
+                    <td>dr. <%= cr.Doctor.Profile.name %></td>
                     <td><%= cr.Desease.name %></td>
                     <td>
-                        <a href="/user/<%= user.id %>/checkResult/<%= cr.id %>">Detail</a>
+                        <a href="/user/<%= patient.id %>/checkResult/<%= cr.id %>">Detail</a>
                     </td>
                 </tr>
                 <% i = i + 1 %> 

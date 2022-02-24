@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Buat Hasil Periksa</h1>
+    <form action="/doctor/<%= doctorId %>/checkResult/edit/<%= checkResult.id %> " method="post">
+        <label>Nama Pasien :</label>
+        <select name="patientId">
+            <% patients.forEach(p => { %>
+                <option value="<%= p.id %>" <% if (checkResult.patientId === p.id) { %> selected <% } %>><%= p.Profile.name %></option>
+            <% }) %>
+          </select><br><br>
+
+          <label>Hasil Diagnosis :</label>
+          <select name="deseaseId">
+              <% deseases.forEach(d => { %>
+                  <option value="<%= d.id %>" <% if (checkResult.deseaseId === d.id) { %> selected <% } %>><%= d.name %></option>
+              <% }) %>
+            </select><br><br>
+
+        <label>Obat :</label><br>
+        <input type="text" name="medicine" value="<%= checkResult.medicine %> "><br><br>
+
+        <label>Deskripsi :</label><br>
+        <textarea name="description"><%= checkResult.description %></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <% if (errors) { %>
+        <h4 style="color: red;margin-bottom:0px;">Error</h4>
+        <ul style="margin-top:10px;">
+            <% errors.forEach(e=> { %>
+                <li style="color: red;">
+                    <%= e %>
+                </li>
+                <% }) %>
+        </ul>
+    <% } %>
+</body>
+</html>
