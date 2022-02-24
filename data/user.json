@@ -42,28 +42,28 @@
     "profileId": 6
   },
   {
-    "name" : "juniaKirana",
+    "username" : "juniaKirana",
     "email" : "juniaKirana@gmail.com",
     "password" : "54321",
     "role":"doctor",
     "profileId": 7
   },
   {
-    "name" : "dimasEga",
+    "username" : "dimasEga",
     "email" : "dimasEga@gmail.com",
     "password" : "123543",
     "role":"doctor",
     "profileId": 8
   },
   {
-    "name" : "adistiEga",
+    "username" : "adistiEga",
     "email" : "adistiEga@gmail.com",
     "password" : "2343233",
     "role":"doctor",
     "profileId": 9
   },
   {
-    "name" : "egaAbian",
+    "username" : "egaAbian",
     "email" : "egaAbian@gmail.com",
     "password" : "dcdfwevcwv",
     "role":"doctor",

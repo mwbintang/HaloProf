@@ -3,38 +3,38 @@
         "name": "tipes",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis augue ante. Integer tempor dui quis orci ultrices placerat. In nec ullamcorper augue, eu posuere risus. Sed at bibendum tellus, et hendrerit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Duis id ornare ex. Fusce sodales mauris augue, eu placerat massa iaculis eu. Proin laoreet tincidunt velit pharetra tristique. Duis neque lorem, sollicitudin aliquet nunc id, congue tincidunt sapien. Donec at sapien accumsan, condimentum orci ac, varius sapien. Cras tristique felis nec arcu luctus, nec iaculis elit viverra. Phasellus eu mattis sapien. Proin id purus non lacus cursus gravida faucibus sit amet ligula. Curabitur molestie turpis eget lacus lobortis vehicula. Maecenas sodales enim nec elementum pulvinar.",
         "level": 1,
-        "SymptompId" : 1
+        "symptomId" : 1
     },
     {
         "name": "covid",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis augue ante. Integer tempor dui quis orci ultrices placerat. In nec ullamcorper augue, eu posuere risus. Sed at bibendum tellus, et hendrerit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Duis id ornare ex. Fusce sodales mauris augue, eu placerat massa iaculis eu. Proin laoreet tincidunt velit pharetra tristique. Duis neque lorem, sollicitudin aliquet nunc id, congue tincidunt sapien. Donec at sapien accumsan, condimentum orci ac, varius sapien. Cras tristique felis nec arcu luctus, nec iaculis elit viverra. Phasellus eu mattis sapien. Proin id purus non lacus cursus gravida faucibus sit amet ligula. Curabitur molestie turpis eget lacus lobortis vehicula. Maecenas sodales enim nec elementum pulvinar.",
         "level": 2,
-        "SymptompId" : 2
+        "symptomId" : 2
         
     },
     {
         "name": "kanker",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis augue ante. Integer tempor dui quis orci ultrices placerat. In nec ullamcorper augue, eu posuere risus. Sed at bibendum tellus, et hendrerit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Duis id ornare ex. Fusce sodales mauris augue, eu placerat massa iaculis eu. Proin laoreet tincidunt velit pharetra tristique. Duis neque lorem, sollicitudin aliquet nunc id, congue tincidunt sapien. Donec at sapien accumsan, condimentum orci ac, varius sapien. Cras tristique felis nec arcu luctus, nec iaculis elit viverra. Phasellus eu mattis sapien. Proin id purus non lacus cursus gravida faucibus sit amet ligula. Curabitur molestie turpis eget lacus lobortis vehicula. Maecenas sodales enim nec elementum pulvinar.",
         "level": 5,
-        "SymptompId" : 4
+        "symptomId" : 4
     },
     {
         "name": "tumor",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis augue ante. Integer tempor dui quis orci ultrices placerat. In nec ullamcorper augue, eu posuere risus. Sed at bibendum tellus, et hendrerit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Duis id ornare ex. Fusce sodales mauris augue, eu placerat massa iaculis eu. Proin laoreet tincidunt velit pharetra tristique. Duis neque lorem, sollicitudin aliquet nunc id, congue tincidunt sapien. Donec at sapien accumsan, condimentum orci ac, varius sapien. Cras tristique felis nec arcu luctus, nec iaculis elit viverra. Phasellus eu mattis sapien. Proin id purus non lacus cursus gravida faucibus sit amet ligula. Curabitur molestie turpis eget lacus lobortis vehicula. Maecenas sodales enim nec elementum pulvinar.",
         "level": 5,
-        "SymptompId" : 1
+        "symptomId" : 1
     },
     {
         "name": "demam berdarah",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis augue ante. Integer tempor dui quis orci ultrices placerat. In nec ullamcorper augue, eu posuere risus. Sed at bibendum tellus, et hendrerit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Duis id ornare ex. Fusce sodales mauris augue, eu placerat massa iaculis eu. Proin laoreet tincidunt velit pharetra tristique. Duis neque lorem, sollicitudin aliquet nunc id, congue tincidunt sapien. Donec at sapien accumsan, condimentum orci ac, varius sapien. Cras tristique felis nec arcu luctus, nec iaculis elit viverra. Phasellus eu mattis sapien. Proin id purus non lacus cursus gravida faucibus sit amet ligula. Curabitur molestie turpis eget lacus lobortis vehicula. Maecenas sodales enim nec elementum pulvinar.",
         "level": 3,
-        "SymptompId" : 6
+        "symptomId" : 6
     },
     {
         "name": "epilepsi",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis augue ante. Integer tempor dui quis orci ultrices placerat. In nec ullamcorper augue, eu posuere risus. Sed at bibendum tellus, et hendrerit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Duis id ornare ex. Fusce sodales mauris augue, eu placerat massa iaculis eu. Proin laoreet tincidunt velit pharetra tristique. Duis neque lorem, sollicitudin aliquet nunc id, congue tincidunt sapien. Donec at sapien accumsan, condimentum orci ac, varius sapien. Cras tristique felis nec arcu luctus, nec iaculis elit viverra. Phasellus eu mattis sapien. Proin id purus non lacus cursus gravida faucibus sit amet ligula. Curabitur molestie turpis eget lacus lobortis vehicula. Maecenas sodales enim nec elementum pulvinar.",
         "level": 2,
-        "SymptompId" : 5
+        "symptomId" : 5
         
     }
 ]
