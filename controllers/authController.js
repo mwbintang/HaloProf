@@ -14,25 +14,38 @@ let transporter = nodemailer.createTransport({
 
 class AuthController {
 	static registerAdd(req, res) {
-		res.render('auth/register',{user:req.session.user ? req.session.user : null})
+		const {error} = req.query
+		res.render('auth/register', {error, user:req.session.user ? req.session.user : null})
 	}
 	static registerPost(req, res) {
+		// console.log(req.body)
 		const { firstName, lastName, age, gender } = req.body
 		const { password, username, email } = req.body
-		console.log(email)
-		memory.UserId = 1;
+		if(!password || !username || !email){
+			User.create({password, username, email})
+				.then()
+				.catch(err => {
+					if(err.name === "SequelizeValidationError"){
+						let error = err.errors.map(el => el.message)
+						res.redirect(`/register?error=${error}`)
+					}else{
+						res.send(err)
+					}
+				})
+		}else{
+			memory.UserId = 1;
 		memory.email = email + ''
 		let result
 		bcrypt.hash(password, 10)
-			.then((data) => {
-				result = data
-				return Profile.create({
-					firstName,
-					lastName,
-					age,
-					gender
-				})
+		.then((data) => {
+			result = data
+			return Profile.create({
+				firstName,
+				lastName,
+				age,
+				gender
 			})
+		})
 			.then((data) => {
 				console.log(data)
 				return User.create({
@@ -61,8 +74,14 @@ class AuthController {
 				res.redirect('/')
 			})
 			.catch(err => {
-				res.send(err)
+				if(err.name === "SequelizeValidationError"){
+					let error = err.errors.map(el => el.message)
+                    res.redirect(`/register?error=${error}`)
+				}else{
+					res.send(err)
+				}
 			})
+		}
 	}
 
 	static showFormlogin(req, res) {
@@ -77,7 +96,7 @@ class AuthController {
 		let user;
 		User.findOne({
 			where: {
-				username: username
+				email: username
 			}
 		}).then(u => {
 			if (!u) {

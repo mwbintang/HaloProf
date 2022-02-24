@@ -24,6 +24,7 @@ app.use(cookieParser());
 
 app.use("/desease", deseaseRoute);
 
+app.use(Controller.isUserAlreadyLogin);
 app.get('/', Controller.home)
 app.use('/', authRoute);
 

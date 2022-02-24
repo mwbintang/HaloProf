@@ -1,9 +1,17 @@
 const {Desease, Symptom} = require('../models')
 const statusDisease = require('../helper')
+const {Op} = require('sequelize')
 
 class DeseaseController{
     static deseaseList(req, res){
-        Desease.findAll({include:Symptom})
+        // console.log(req.query)
+        const {search} = req.query
+        let obj = {include:Symptom}
+        if(search){
+            obj = {include:Symptom, where:{name:{[Op.iLike]: `%${search}%`}}}
+        }
+
+        Desease.findAll(obj)
             .then(result=>{
                 res.render('deseaseList', {result, user:req.session.user ? req.session.user : null})
             })
