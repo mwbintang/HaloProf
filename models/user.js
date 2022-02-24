@@ -10,20 +10,16 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      User.hasMany(models.CheckResult, { foreignKey:"userId"});
-      User.belongsTo(models.Profile, { foreignKey:"profileId"});
+      // define association here
     }
   }
   User.init({
     username: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
+    role: DataTypes.STRING,
     profileId: DataTypes.INTEGER
   }, {
-    hooks: {
-      beforeCreate: function(user, options) {
-        user.profileId = 1
-      }},
     sequelize,
     modelName: 'User',
   });

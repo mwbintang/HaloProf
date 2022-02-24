@@ -1,30 +1,28 @@
 'use strict';
 module.exports = {
   up(queryInterface, Sequelize) {
-    return queryInterface.createTable('Desease_Symptomps', {
+    return queryInterface.createTable('Deseases', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      deseaseId:{
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Deseases",
-          key: "id",
-        },
-        onUpdate: "CASCADE",
-        onDelete: "CASCADE",
+      name: {
+        type: Sequelize.STRING
       },
-      symptompId: {
+      description: {
+        type: Sequelize.TEXT
+      },
+      level: {
+        type: Sequelize.INTEGER
+      },
+      symptomId: {
         type: Sequelize.INTEGER,
         references: {
-          model: "Symptomps",
-          key: "id",
-        },
-        onUpdate: "CASCADE",
-        onDelete: "CASCADE",
+          model: 'Symptoms',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
@@ -37,6 +35,6 @@ module.exports = {
     });
   },
   down(queryInterface, Sequelize) {
-    return queryInterface.dropTable('desease_symptomps');
+    return queryInterface.dropTable('Deseases');
   }
 };

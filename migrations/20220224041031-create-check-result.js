@@ -8,32 +8,26 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      userId: {
+      patientId:{
         type: Sequelize.INTEGER,
         references: {
-          model: "Users",
-          key: "id",
-        },
-        onUpdate: "CASCADE",
-        onDelete: "CASCADE",
+          model: 'Users',
+          key: 'id'
+        }
       },
       deseaseId: {
         type: Sequelize.INTEGER,
         references: {
-          model: "Deseases",
-          key: "id",
-        },
-        onUpdate: "CASCADE",
-        onDelete: "CASCADE",
+          model: 'Deseases',
+          key: 'id'
+        }
       },
       doctorId: {
         type: Sequelize.INTEGER,
         references: {
-          model: "Doctors",
-          key: "id",
-        },
-        onUpdate: "CASCADE",
-        onDelete: "CASCADE",
+          model: 'Users',
+          key: 'id'
+        }
       },
       medicine: {
         type: Sequelize.STRING
