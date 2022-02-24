@@ -1,37 +1,40 @@
-[
-    {
-        "patientId":1,
-        "deseaseId":1,
-        "doctorId":6,
-        "medicine":"yang penting obat",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis augue ante. Integer tempor dui quis orci ultrices placerat. In nec ullamcorper augue, eu posuere risus. Sed at bibendum tellus, et hendrerit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Duis id ornare ex. Fusce sodales mauris augue, eu placerat massa iaculis eu. Proin laoreet tincidunt velit pharetra tristique. Duis neque lorem, sollicitudin aliquet nunc id, congue tincidunt sapien. Donec at sapien accumsan, condimentum orci ac, varius sapien. Cras tristique felis nec arcu luctus, nec iaculis elit viverra. Phasellus eu mattis sapien. Proin id purus non lacus cursus gravida faucibus sit amet ligula. Curabitur molestie turpis eget lacus lobortis vehicula. Maecenas sodales enim nec elementum pulvinar."
-    },
-    {
-        "patientId":2,
-        "deseaseId":5,
-        "doctorId":6,
-        "medicine":"Makan,Tidur,Olahraga",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet quis magna vel placerat. Maecenas dictum eros eros, id lacinia dui semper in. Vestibulum pellentesque, felis varius malesuada pretium, enim turpis mollis elit, et ultrices lorem lacus sed purus. Sed non tempus nisi, id gravida diam. In mattis, lorem id vehicula aliquet, mauris libero gravida sapien, in suscipit est ante eu odio. Sed vestibulum libero quis velit pharetra pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean sed nibh malesuada, blandit mauris a, maximus dui. Sed elementum velit ut dui ornare ornare. Pellentesque posuere, augue at aliquam aliquam, libero augue ornare sapien, gravida aliquam tortor est sit amet metus."
-    },
-    {
-        "patientId":2,
-        "deseaseId":3,
-        "doctorId":6,
-        "medicine":"Makan,Tidur,Olahraga",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet quis magna vel placerat. Maecenas dictum eros eros, id lacinia dui semper in. Vestibulum pellentesque, felis varius malesuada pretium, enim turpis mollis elit, et ultrices lorem lacus sed purus. Sed non tempus nisi, id gravida diam. In mattis, lorem id vehicula aliquet, mauris libero gravida sapien, in suscipit est ante eu odio. Sed vestibulum libero quis velit pharetra pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean sed nibh malesuada, blandit mauris a, maximus dui. Sed elementum velit ut dui ornare ornare. Pellentesque posuere, augue at aliquam aliquam, libero augue ornare sapien, gravida aliquam tortor est sit amet metus."
-    },
-    {
-        "patientId":3,
-        "deseaseId":4,
-        "doctorId":10,
-        "medicine":"Makan,Tidur,Olahraga",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet quis magna vel placerat. Maecenas dictum eros eros, id lacinia dui semper in. Vestibulum pellentesque, felis varius malesuada pretium, enim turpis mollis elit, et ultrices lorem lacus sed purus. Sed non tempus nisi, id gravida diam. In mattis, lorem id vehicula aliquet, mauris libero gravida sapien, in suscipit est ante eu odio. Sed vestibulum libero quis velit pharetra pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean sed nibh malesuada, blandit mauris a, maximus dui. Sed elementum velit ut dui ornare ornare. Pellentesque posuere, augue at aliquam aliquam, libero augue ornare sapien, gravida aliquam tortor est sit amet metus."
-    },
-    {
-        "patientId":1,
-        "deseaseId":2,
-        "doctorId":7,
-        "medicine":"Makan,Tidur,Olahraga",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet quis magna vel placerat. Maecenas dictum eros eros, id lacinia dui semper in. Vestibulum pellentesque, felis varius malesuada pretium, enim turpis mollis elit, et ultrices lorem lacus sed purus. Sed non tempus nisi, id gravida diam. In mattis, lorem id vehicula aliquet, mauris libero gravida sapien, in suscipit est ante eu odio. Sed vestibulum libero quis velit pharetra pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean sed nibh malesuada, blandit mauris a, maximus dui. Sed elementum velit ut dui ornare ornare. Pellentesque posuere, augue at aliquam aliquam, libero augue ornare sapien, gravida aliquam tortor est sit amet metus."
-    }
-]
+[{"patientId":5,"deseaseId":9,"doctorId":7,"medicine":"Acetaminophen, Dextromethorphan HBr, Doxylamine succinate","description":"Chronic or unspecified parametritis and pelvic cellulitis"},
+{"patientId":2,"deseaseId":6,"doctorId":8,"medicine":"Black Locust","description":"Kaschin-Beck disease, other specified sites"},
+{"patientId":3,"deseaseId":10,"doctorId":7,"medicine":"Concord Grape","description":"Other and unspecified hormones and synthetic substitutes causing adverse effects in therapeutic use"},
+{"patientId":2,"deseaseId":8,"doctorId":9,"medicine":"Clemastine fumarate","description":"Phlebitis and thrombophlebitis of superficial veins of upper extremities"},
+{"patientId":2,"deseaseId":6,"doctorId":7,"medicine":"Stannum 5","description":"Explosion, fire, or burning in watercraft injuring occupant of small boat, unpowered"},
+{"patientId":4,"deseaseId":6,"doctorId":7,"medicine":"Cefuroxime Axetil","description":"Pressure ulcer, unspecified site"},
+{"patientId":3,"deseaseId":8,"doctorId":9,"medicine":"Levetiracetam","description":"Disseminated choroiditis and chorioretinitis, peripheral"},
+{"patientId":4,"deseaseId":6,"doctorId":10,"medicine":"Acyclovir","description":"Special screening examination for other specified chlamydial diseases"},
+{"patientId":1,"deseaseId":7,"doctorId":9,"medicine":"Iris germanica comp.","description":"Bipolar I disorder, most recent episode (or current) manic, mild"},
+{"patientId":5,"deseaseId":10,"doctorId":7,"medicine":"Triclosan","description":"Palindromic rheumatism, multiple sites"},
+{"patientId":1,"deseaseId":8,"doctorId":6,"medicine":"Oxymetazoline hydrochloride","description":"Benign neoplasm of colon"},
+{"patientId":4,"deseaseId":6,"doctorId":6,"medicine":"TITANIUM DIOXIDE","description":"Unspecified disorder of iris and ciliary body"},
+{"patientId":3,"deseaseId":3,"doctorId":10,"medicine":"fentanyl","description":"Other specified intestinal helminthiasis"},
+{"patientId":5,"deseaseId":5,"doctorId":8,"medicine":"dexamethasone","description":"Coronary atherosclerosis due to calcified coronary lesion"},
+{"patientId":5,"deseaseId":7,"doctorId":8,"medicine":"Naproxen","description":"Tuberculosis of ear, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically"},
+{"patientId":2,"deseaseId":2,"doctorId":8,"medicine":"FLUOXETINE","description":"Hypothermia not associated with low environmental temperature"},
+{"patientId":5,"deseaseId":4,"doctorId":10,"medicine":"Petasites Quercus","description":"Puerperal sepsis, unspecified as to episode of care or not applicable"},
+{"patientId":2,"deseaseId":8,"doctorId":8,"medicine":"GLYCERIN","description":"Spontaneous abortion, with other specified complications, incomplete"},
+{"patientId":5,"deseaseId":2,"doctorId":6,"medicine":"Helium Oxygen","description":"Meningitis due to unspecified bacterium"},
+{"patientId":5,"deseaseId":6,"doctorId":7,"medicine":"losartan potassium","description":"Suicide and self-inflicted injury by burns, fire"},
+{"patientId":1,"deseaseId":7,"doctorId":7,"medicine":"CETYLPYRIDINIUM CHLORIDE","description":"Open fracture of ilium"},
+{"patientId":5,"deseaseId":10,"doctorId":6,"medicine":"Water","description":"Merkel cell carcinoma of the trunk"},
+{"patientId":2,"deseaseId":10,"doctorId":6,"medicine":"DEXAMETHASONE SODIUM PHOSPHATE","description":"Congenital deformity of knee (joint)"},
+{"patientId":4,"deseaseId":8,"doctorId":9,"medicine":"Treatment Set TS336851","description":"Fitting and adjustment, other device"},
+{"patientId":1,"deseaseId":4,"doctorId":7,"medicine":"Divalproex Sodium","description":"Heavy metal anti-infectives causing adverse effects in therapeutic use"},
+{"patientId":2,"deseaseId":2,"doctorId":9,"medicine":"methimazole","description":"Fatal familial insomnia"},
+{"patientId":2,"deseaseId":8,"doctorId":10,"medicine":"lisinopril","description":"Attention deficit disorder without mention of hyperactivity"},
+{"patientId":4,"deseaseId":9,"doctorId":7,"medicine":"Clotrimazole","description":"Malignant neoplasm of hepatic flexure"},
+{"patientId":5,"deseaseId":7,"doctorId":9,"medicine":"OCTINOXATE, TITANIUM DIOXIDE, and ZINC OXIDE","description":"Lumbar spinal cord injury without evidence of spinal bone injury"},
+{"patientId":5,"deseaseId":2,"doctorId":7,"medicine":"Famotidine","description":"Mechanical failure of instrument or apparatus during surgical operation"},
+{"patientId":4,"deseaseId":3,"doctorId":6,"medicine":"insulin aspart","description":"Other multiple birth (three or more), mates liveborn and stillborn, born outside hospital and not hospitalized"},
+{"patientId":2,"deseaseId":8,"doctorId":8,"medicine":"Saline Nasal","description":"Osteoarthrosis, generalized, multiple sites"},
+{"patientId":3,"deseaseId":6,"doctorId":8,"medicine":"diphenhydramine hydrochloride","description":"Other postablative hypothyroidism"},
+{"patientId":2,"deseaseId":6,"doctorId":9,"medicine":"PYRITHIONE ZINC","description":"Kidney dialysis as the cause of abnormal reaction of patient, or of later complication, without mention of misadventure at time of procedure"},
+{"patientId":3,"deseaseId":6,"doctorId":8,"medicine":"HUMAN RHO(D) IMMUNE GLOBULIN","description":"Chronic or unspecified gastrojejunal ulcer, with hemorrhage, with obstruction"},
+{"patientId":4,"deseaseId":6,"doctorId":6,"medicine":"Aspirin","description":"Regional enteritis of large intestine"},
+{"patientId":3,"deseaseId":8,"doctorId":10,"medicine":"GELSEMIUM,ECHINACEA,BAPTISIA PHYTOLACCA DECANDRA,TINCTORIA,ARSENICUM ALBUM,IRIDIUM,MERCURIUS CORROSIVUS,EUPATORIUM PERFOLIATUM,BRYONIA,FERRUM PHOSPHORICUM,","description":"Hyphema of iris and ciliary body"},
+{"patientId":3,"deseaseId":2,"doctorId":9,"medicine":"HYPERICUM,NAT MUR,RAN B,THUJA,NITRIC ACID,RHUS TOX,GELSENICUM,ECHINACEA,LYCOPODUM,HYDRASTIS","description":"Parathyroid and parathyroid derivatives causing adverse effects in therapeutic use"},
+{"patientId":4,"deseaseId":4,"doctorId":9,"medicine":"Octinoxate and Oxybenzone","description":"Infertility, female, of pituitary-hypothalamic origin"},
+{"patientId":3,"deseaseId":5,"doctorId":9,"medicine":"Trazodone Hydrochloride","description":"Excessive attrition, extending into pulp"}]

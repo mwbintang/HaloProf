@@ -1,0 +1,37 @@
+[
+    {
+        "patientId":1,
+        "deseaseId":1,
+        "doctorId":6,
+        "medicine":"yang penting obat",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis augue ante. Integer tempor dui quis orci ultrices placerat. In nec ullamcorper augue, eu posuere risus. Sed at bibendum tellus, et hendrerit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Duis id ornare ex. Fusce sodales mauris augue, eu placerat massa iaculis eu. Proin laoreet tincidunt velit pharetra tristique. Duis neque lorem, sollicitudin aliquet nunc id, congue tincidunt sapien. Donec at sapien accumsan, condimentum orci ac, varius sapien. Cras tristique felis nec arcu luctus, nec iaculis elit viverra. Phasellus eu mattis sapien. Proin id purus non lacus cursus gravida faucibus sit amet ligula. Curabitur molestie turpis eget lacus lobortis vehicula. Maecenas sodales enim nec elementum pulvinar."
+    },
+    {
+        "patientId":2,
+        "deseaseId":5,
+        "doctorId":6,
+        "medicine":"Makan,Tidur,Olahraga",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet quis magna vel placerat. Maecenas dictum eros eros, id lacinia dui semper in. Vestibulum pellentesque, felis varius malesuada pretium, enim turpis mollis elit, et ultrices lorem lacus sed purus. Sed non tempus nisi, id gravida diam. In mattis, lorem id vehicula aliquet, mauris libero gravida sapien, in suscipit est ante eu odio. Sed vestibulum libero quis velit pharetra pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean sed nibh malesuada, blandit mauris a, maximus dui. Sed elementum velit ut dui ornare ornare. Pellentesque posuere, augue at aliquam aliquam, libero augue ornare sapien, gravida aliquam tortor est sit amet metus."
+    },
+    {
+        "patientId":2,
+        "deseaseId":3,
+        "doctorId":6,
+        "medicine":"Makan,Tidur,Olahraga",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet quis magna vel placerat. Maecenas dictum eros eros, id lacinia dui semper in. Vestibulum pellentesque, felis varius malesuada pretium, enim turpis mollis elit, et ultrices lorem lacus sed purus. Sed non tempus nisi, id gravida diam. In mattis, lorem id vehicula aliquet, mauris libero gravida sapien, in suscipit est ante eu odio. Sed vestibulum libero quis velit pharetra pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean sed nibh malesuada, blandit mauris a, maximus dui. Sed elementum velit ut dui ornare ornare. Pellentesque posuere, augue at aliquam aliquam, libero augue ornare sapien, gravida aliquam tortor est sit amet metus."
+    },
+    {
+        "patientId":3,
+        "deseaseId":4,
+        "doctorId":10,
+        "medicine":"Makan,Tidur,Olahraga",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet quis magna vel placerat. Maecenas dictum eros eros, id lacinia dui semper in. Vestibulum pellentesque, felis varius malesuada pretium, enim turpis mollis elit, et ultrices lorem lacus sed purus. Sed non tempus nisi, id gravida diam. In mattis, lorem id vehicula aliquet, mauris libero gravida sapien, in suscipit est ante eu odio. Sed vestibulum libero quis velit pharetra pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean sed nibh malesuada, blandit mauris a, maximus dui. Sed elementum velit ut dui ornare ornare. Pellentesque posuere, augue at aliquam aliquam, libero augue ornare sapien, gravida aliquam tortor est sit amet metus."
+    },
+    {
+        "patientId":1,
+        "deseaseId":2,
+        "doctorId":7,
+        "medicine":"Makan,Tidur,Olahraga",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet quis magna vel placerat. Maecenas dictum eros eros, id lacinia dui semper in. Vestibulum pellentesque, felis varius malesuada pretium, enim turpis mollis elit, et ultrices lorem lacus sed purus. Sed non tempus nisi, id gravida diam. In mattis, lorem id vehicula aliquet, mauris libero gravida sapien, in suscipit est ante eu odio. Sed vestibulum libero quis velit pharetra pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean sed nibh malesuada, blandit mauris a, maximus dui. Sed elementum velit ut dui ornare ornare. Pellentesque posuere, augue at aliquam aliquam, libero augue ornare sapien, gravida aliquam tortor est sit amet metus."
+    }
+]

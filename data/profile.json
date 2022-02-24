@@ -1,10 +1,62 @@
-[{"firstName":"Barn","lastName":"Cudbird","age":31,"gender":"Male"},
-{"firstName":"Leslie","lastName":"Adolfson","age":55,"gender":"Female"},
-{"firstName":"Kirbee","lastName":"Poulston","age":39,"gender":"Female"},
-{"firstName":"Merrili","lastName":"Hartzenberg","age":46,"gender":"Male"},
-{"firstName":"Shaine","lastName":"Merricks","age":11,"gender":"Female"},
-{"firstName":"Sergent","lastName":"Jori","age":57,"gender":"Male"},
-{"firstName":"Helli","lastName":"Yegorchenkov","age":31,"gender":"Female"},
-{"firstName":"Johnna","lastName":"MacUchadair","age":67,"gender":"Female"},
-{"firstName":"Rog","lastName":"Jensen","age":69,"gender":"Male"},
-{"firstName":"Dall","lastName":"Birdfield","age":49,"gender":"Male"}]
+[
+  {
+    "firstName": "Mahmudin" ,
+    "lastName":"Bayangkara",
+    "age": 15,
+    "gender": "Male"
+  },
+  {
+    "firstName": "Karina",
+    "lastName":"Maharani",
+    "age": 20,
+    "gender": "Female"
+  },
+  {
+    "firstName": "Maiden", 
+    "lastName":"Kristina",
+    "age": 50,
+    "gender": "Female"
+  },
+  {
+    "firstName": "Jamaludin", 
+    "lastName":"Samudra",
+    "age": 28,
+    "gender": "Male"
+  },
+  {
+    "firstName": "Paijo", 
+    "lastName":"Pangestu",
+    "age": 19,
+    "gender": "Male"
+  },
+  {
+    "firstName": "Ketut", 
+    "lastName":"Santika",
+    "age": 40,
+    "gender": "Female"
+  },
+  {
+    "firstName": "Junia", 
+    "lastName":"Kirana",
+    "age": 50,
+    "gender": "Female"
+  },
+  {
+    "firstName": "Dimas", 
+    "lastName":"Ega",
+    "age": 56,
+    "gender": "Male"
+  },
+  {
+    "firstName": "Adisti", 
+    "lastName":"Ega",
+    "age": 45,
+    "gender": "Female"
+  },
+  {
+    "firstName": "Ega", 
+    "lastName":"Abian",
+    "age": 60,
+    "gender": "Male"
+  }
+]

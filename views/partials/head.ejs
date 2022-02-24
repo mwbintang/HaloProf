@@ -15,7 +15,7 @@
             <button><a href="/login">Login</a></button>
             <button><a href="/register">Register</a></button>
         <% } %>
-        <button><a href="/desease">Profile</a></button>
+        <button><a href="/desease">Penyakit</a></button>
         <% if (user) { %>
             <% if (user.role === "patient") { %>
                 <button><a href="/user/<%= user.id %>">Riwayat Penyakit</a></button>

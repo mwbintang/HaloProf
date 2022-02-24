@@ -1,40 +1,10 @@
-[
-    {
-        "name": "tipes",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis augue ante. Integer tempor dui quis orci ultrices placerat. In nec ullamcorper augue, eu posuere risus. Sed at bibendum tellus, et hendrerit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Duis id ornare ex. Fusce sodales mauris augue, eu placerat massa iaculis eu. Proin laoreet tincidunt velit pharetra tristique. Duis neque lorem, sollicitudin aliquet nunc id, congue tincidunt sapien. Donec at sapien accumsan, condimentum orci ac, varius sapien. Cras tristique felis nec arcu luctus, nec iaculis elit viverra. Phasellus eu mattis sapien. Proin id purus non lacus cursus gravida faucibus sit amet ligula. Curabitur molestie turpis eget lacus lobortis vehicula. Maecenas sodales enim nec elementum pulvinar.",
-        "level": 1,
-        "symptomId" : 1
-    },
-    {
-        "name": "covid",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis augue ante. Integer tempor dui quis orci ultrices placerat. In nec ullamcorper augue, eu posuere risus. Sed at bibendum tellus, et hendrerit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Duis id ornare ex. Fusce sodales mauris augue, eu placerat massa iaculis eu. Proin laoreet tincidunt velit pharetra tristique. Duis neque lorem, sollicitudin aliquet nunc id, congue tincidunt sapien. Donec at sapien accumsan, condimentum orci ac, varius sapien. Cras tristique felis nec arcu luctus, nec iaculis elit viverra. Phasellus eu mattis sapien. Proin id purus non lacus cursus gravida faucibus sit amet ligula. Curabitur molestie turpis eget lacus lobortis vehicula. Maecenas sodales enim nec elementum pulvinar.",
-        "level": 2,
-        "symptomId" : 2
-        
-    },
-    {
-        "name": "kanker",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis augue ante. Integer tempor dui quis orci ultrices placerat. In nec ullamcorper augue, eu posuere risus. Sed at bibendum tellus, et hendrerit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Duis id ornare ex. Fusce sodales mauris augue, eu placerat massa iaculis eu. Proin laoreet tincidunt velit pharetra tristique. Duis neque lorem, sollicitudin aliquet nunc id, congue tincidunt sapien. Donec at sapien accumsan, condimentum orci ac, varius sapien. Cras tristique felis nec arcu luctus, nec iaculis elit viverra. Phasellus eu mattis sapien. Proin id purus non lacus cursus gravida faucibus sit amet ligula. Curabitur molestie turpis eget lacus lobortis vehicula. Maecenas sodales enim nec elementum pulvinar.",
-        "level": 5,
-        "symptomId" : 4
-    },
-    {
-        "name": "tumor",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis augue ante. Integer tempor dui quis orci ultrices placerat. In nec ullamcorper augue, eu posuere risus. Sed at bibendum tellus, et hendrerit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Duis id ornare ex. Fusce sodales mauris augue, eu placerat massa iaculis eu. Proin laoreet tincidunt velit pharetra tristique. Duis neque lorem, sollicitudin aliquet nunc id, congue tincidunt sapien. Donec at sapien accumsan, condimentum orci ac, varius sapien. Cras tristique felis nec arcu luctus, nec iaculis elit viverra. Phasellus eu mattis sapien. Proin id purus non lacus cursus gravida faucibus sit amet ligula. Curabitur molestie turpis eget lacus lobortis vehicula. Maecenas sodales enim nec elementum pulvinar.",
-        "level": 5,
-        "symptomId" : 1
-    },
-    {
-        "name": "demam berdarah",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis augue ante. Integer tempor dui quis orci ultrices placerat. In nec ullamcorper augue, eu posuere risus. Sed at bibendum tellus, et hendrerit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Duis id ornare ex. Fusce sodales mauris augue, eu placerat massa iaculis eu. Proin laoreet tincidunt velit pharetra tristique. Duis neque lorem, sollicitudin aliquet nunc id, congue tincidunt sapien. Donec at sapien accumsan, condimentum orci ac, varius sapien. Cras tristique felis nec arcu luctus, nec iaculis elit viverra. Phasellus eu mattis sapien. Proin id purus non lacus cursus gravida faucibus sit amet ligula. Curabitur molestie turpis eget lacus lobortis vehicula. Maecenas sodales enim nec elementum pulvinar.",
-        "level": 3,
-        "symptomId" : 6
-    },
-    {
-        "name": "epilepsi",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis augue ante. Integer tempor dui quis orci ultrices placerat. In nec ullamcorper augue, eu posuere risus. Sed at bibendum tellus, et hendrerit ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Duis id ornare ex. Fusce sodales mauris augue, eu placerat massa iaculis eu. Proin laoreet tincidunt velit pharetra tristique. Duis neque lorem, sollicitudin aliquet nunc id, congue tincidunt sapien. Donec at sapien accumsan, condimentum orci ac, varius sapien. Cras tristique felis nec arcu luctus, nec iaculis elit viverra. Phasellus eu mattis sapien. Proin id purus non lacus cursus gravida faucibus sit amet ligula. Curabitur molestie turpis eget lacus lobortis vehicula. Maecenas sodales enim nec elementum pulvinar.",
-        "level": 2,
-        "symptomId" : 5
-        
-    }
-]
+[{"name":"Gordon","description":"Removal of Autologous Tissue Substitute from Right Metatarsal, Open Approach","level":2,"symptomId":2},
+{"name":"Brianne","description":"Extirpation of Matter from Vagina, External Approach","level":1,"symptomId":4},
+{"name":"Lib","description":"Replacement of Left Hand Vein with Nonautologous Tissue Substitute, Open Approach","level":5,"symptomId":6},
+{"name":"Neill","description":"Beam Radiation of Skull using Photons 1 - 10 MeV","level":3,"symptomId":3},
+{"name":"Lindsay","description":"Dilation of Right Axillary Artery, Bifurcation, Percutaneous Endoscopic Approach","level":2,"symptomId":8},
+{"name":"Shawna","description":"Removal of Drainage Device from Right Knee Joint, Open Approach","level":3,"symptomId":6},
+{"name":"Lorine","description":"Transfusion of Autologous Hematopoietic Stem Cells into Peripheral Artery, Open Approach","level":5,"symptomId":5},
+{"name":"Pat","description":"Revision of Nonautologous Tissue Substitute in Sternum, Percutaneous Endoscopic Approach","level":2,"symptomId":1},
+{"name":"Eolanda","description":"Bypass Transverse Colon to Rectum with Autologous Tissue Substitute, Open Approach","level":1,"symptomId":4},
+{"name":"Deloris","description":"Measurement of Intracranial Temperature, Via Natural or Artificial Opening","level":1,"symptomId":5}]
