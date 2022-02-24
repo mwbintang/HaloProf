@@ -75,13 +75,15 @@ class AuthController {
 		let user;
 		User.findOne({
 			where: {
-				username: username
+				email: username
 			}
 		}).then(u => {
 			if (!u) {
 				res.redirect("/login?error=Username/Password+is+incorrect")
 			} else {
 				user = u;
+				console.log(password)
+				console.log(u.password)
 				return bcrypt.compare(password, u.password);
 			}
 		}).then(result => {
