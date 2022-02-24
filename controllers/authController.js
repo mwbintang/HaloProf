@@ -14,7 +14,7 @@ let transporter = nodemailer.createTransport({
 
 class AuthController {
 	static registerAdd(req, res) {
-		res.render('auth/register')
+		res.render('auth/register',{user:req.session.user ? req.session.user : null})
 	}
 	static registerPost(req, res) {
 		const { firstName, lastName, age, gender } = req.body
@@ -66,8 +66,10 @@ class AuthController {
 	}
 
 	static showFormlogin(req, res) {
-		console.log(req.query);
-		res.render("auth/login")
+		res.render("auth/login",{
+			error:req.query.error? req.query.error : null,
+			user:req.session.user ? req.session.user : null
+		})
 	}
 
 	static login(req, res) {
@@ -86,7 +88,7 @@ class AuthController {
 			}
 		}).then(result => {
 			if(result === true){
-				req.session.userRole = user.role;
+				req.session.user = user;
 				if(user.role === "doctor"){
 					res.redirect(`/doctor/${user.id}/checkResult`)
 				}else{

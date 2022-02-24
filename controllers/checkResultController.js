@@ -42,7 +42,8 @@ class CheckResultController {
             res.render("checkResult/indexDoctor", {
                 checkResults,
                 doctorId,
-                doctors
+                doctors,
+                user:req.session.user ? req.session.user : null
             });
         }).catch(err => res.send(err));
     }
@@ -62,7 +63,7 @@ class CheckResultController {
                 include: Profile
             }]
         }).then(checkResult => {
-            res.render("checkResult/detail", { checkResult });
+            res.render("checkResult/detail", { checkResult,user:req.session.user ? req.session.user : null });
         }).catch(err => res.send(err));
     }
 
@@ -82,7 +83,8 @@ class CheckResultController {
                 patients, 
                 deseases, 
                 doctorId,
-                errors : req.query.errors ? req.query.errors.split(";") : null
+                errors : req.query.errors ? req.query.errors.split(";") : null,
+                user:req.session.user ? req.session.user : null
              })
         }).catch(err => console.log(err));
     }
@@ -169,7 +171,8 @@ class CheckResultController {
                 deseases, 
                 doctorId,
                 checkResult,
-                errors : req.query.errors ? req.query.errors.split(";") : null
+                errors : req.query.errors ? req.query.errors.split(";") : null,
+                user:req.session.user ? req.session.user : null
              })
         }).catch(err => console.log(err));
     }

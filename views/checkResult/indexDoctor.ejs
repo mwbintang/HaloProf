@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<%- include('../partials/head',{user}); %>
     <h1>Hasil Periksa</h1>
     <a href="/doctor/<%= doctorId %>/checkResult/add">Buat Hasil Periksa Baru</a><br><br>
     <form action="" method="get">
@@ -54,5 +46,4 @@
             <% }) %>
         </tbody>
     </table>
-</body>
-</html>
+<%- include('../partials/foot'); %>

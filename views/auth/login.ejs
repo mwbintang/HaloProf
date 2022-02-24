@@ -1,27 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
+<%- include('../partials/head',{user}); %>
   <h1>Login</h1>
   <form action="/login" method="POST">
-    <div>
-      <label for="username">Email :</label>
-      <input type="text" name="username" required>
-    </div>
-    <div>
-      <label for="password">Password :</label>
-      <input type="password" id="password" name="password" required>
-    </div>
-    <button type="submit">Login</button>
-  </form>
-  <a href="/register">Register</a>
-</body>
 
-</html>
+    <% if (error) { %>
+      <p style="color: red;margin-bottom:0px;"><%= error %> </p>
+      <% } %>
+      <table>
+        <tr>
+          <td><label for="username">Username :</label></td>
+          <td><input type="text" name="username" required></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password :</label></td>
+          <td><input type="password" id="password" name="password" required></td>
+        </tr>
+      </table>
+        <button type="submit">Login</button> 
+  </form>
+<%- include('../partials/foot'); %>

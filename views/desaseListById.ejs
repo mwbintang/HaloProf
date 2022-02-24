@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <button><a href="/login">Login</a></button>
-    <button><a href="/register">Register</a></button>
+<%- include('partials/head',{user}); %>
     <h1><%= result.name %></h1>
     <h3>Gejala: <%= result.Symptom.name %></h3>
     <table border="1">
@@ -21,5 +11,4 @@
                 <td><%=statusDisease(result.level)%></td>
             </tr>
     </table>
-</body>
-</html>
+<%- include('partials/foot'); %>

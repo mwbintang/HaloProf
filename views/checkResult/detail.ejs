@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body border="1">
+<%- include('../partials/head',{user}); %>
     <h1>Detail Hasil Periksa</h1>
     <h6>Dokter yang Memeriksa : dr. <%= checkResult.Doctor.Profile.name %></h6>
     <h6>Nama Pasien : <%= checkResult.Patient.Profile.name %></h6>
@@ -15,5 +7,4 @@
     <h6>Obat : <%= checkResult.medicine %></h6>
     <h6>Deskripsi : </h6>
     <p><%= checkResult.description %></p>
-</body>
-</html>
+<%- include('../partials/foot'); %>

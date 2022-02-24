@@ -22,7 +22,7 @@ class UserController{
                 id:id
             }
         }).then(patient => {
-            res.render("user/profile",{patient})
+            res.render("user/profile",{patient,user:req.session.user ? req.session.user : null})
         }).catch(err => console.log(err));
     }
 }
