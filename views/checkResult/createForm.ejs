@@ -31,5 +31,15 @@
 
         <button type="submit">Submit</button>
     </form>
+    <% if (errors) { %>
+            <h4 style="color: red;margin-bottom:0px;">Error</h4>
+            <ul style="margin-top:10px;">
+                <% errors.forEach(e=> { %>
+                    <li style="color: red;">
+                        <%= e %>
+                    </li>
+                    <% }) %>
+            </ul>
+        <% } %>
 </body>
 </html>

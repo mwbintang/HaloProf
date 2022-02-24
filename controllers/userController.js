@@ -6,7 +6,7 @@ class UserController{
         User.findOne({
             include:[{
                 model:CheckResult,
-                association: 'Patients',
+                as: 'userRecord',
                 include:[{
                     model:Desease
                 },{

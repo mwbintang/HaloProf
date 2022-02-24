@@ -26,27 +26,74 @@ module.exports = (sequelize, DataTypes) => {
   CheckResult.init({
     patientId: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'Users',
         key: 'id'
+      },
+      validate: {
+        notNull:{
+          arg:true,
+          msg:"Patient must be filled"
+        }
       }
     },
     deseaseId:{
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'Deseases',
         key: 'id'
+      },
+      validate: {
+        notNull:{
+          arg:true,
+          msg:"Disease must be filled"
+        }
       }
     },
     doctorId: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'Users',
         key: 'id'
+      },
+      validate: {
+        notNull:{
+          arg:true,
+          msg:"Doctor must be filled"
+        }
       }
     },
-    medicine: DataTypes.STRING,
-    description: DataTypes.TEXT
+    medicine: {
+      type:DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull:{
+          arg:true,
+          msg:"Medicine must be filled"
+        },
+        notEmpty:{
+          arg:true,
+          msg:"Medicine must be filled"
+        }
+      }
+    },
+    description: {
+      type:DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        notNull:{
+          arg:true,
+          msg:"Description must be filled"
+        },
+        notEmpty:{
+          arg:true,
+          msg:"Description must be filled"
+        },
+      }
+    }
   }, {
     sequelize,
     modelName: 'CheckResult',
