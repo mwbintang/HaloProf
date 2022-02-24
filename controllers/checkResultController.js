@@ -2,6 +2,7 @@ const { user } = require("pg/lib/defaults");
 const {CheckResult,User,Desease,Doctor,Profile} = require("../models/index")
 class checkResultController{
     static showCRForDoctor(req,res){
+        const doctorId = req.params.doctorId;
         CheckResult.findAll(
             {
                 include:[{
@@ -14,7 +15,7 @@ class checkResultController{
                 }]
             }
         ).then(checkResults => {
-            res.render("checkResult/indexDoctor",checkResults);
+            res.render("checkResult/indexDoctor",{checkResults,doctorId});
         }).catch(err => res.send(err));
     }
 
@@ -30,11 +31,12 @@ class checkResultController{
                 model:Doctor
             }]
         }).then(checkResult => {
-            res.render("detail",checkResult);
+            res.render("checkResult/detail",{checkResult});
         }).catch(err => res.send(err));
     }
 
     static showCRForm(req,res){
+        const doctorId = req.params.doctorId;
         let users;
         User.findAll({
             include:Profile
@@ -42,12 +44,17 @@ class checkResultController{
             users = u;
             return Desease.findAll();
         }).then(deseases => {
-            res.render("checkResult/createForm",{ users, deseases})
+            res.render("checkResult/createForm",{ users, deseases, doctorId})
         }).catch(err => res.send(err));
     }
 
     static createCR(req,res){
-
+        const doctorId = req.params.doctorId;
+        const { userId, deseaseId, medicine, description } = req.body;
+        CheckResult.create({doctorId, userId, deseaseId, medicine, description})
+            .then(()=>{
+                res.redirect(`/doctor/${doctorId}/checkResult`)
+            }).catch(err => res.send(err));
     }
 }
 

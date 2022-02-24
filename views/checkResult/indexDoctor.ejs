@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body border="1">
-    <h1>Checkup Records</h1>
-    <table>
+<body>
+    <h1>Hasil Periksa</h1>
+    <a href="/doctor/<%= doctorId %>/checkResult/add">Buat Hasil Periksa Baru</a>
+    <table border="1">
         <thead>
             <tr>
                 <th>No</th>
-                <th>Doctor Name</th>
-                <th>Patient Name</th>
-                <th>Diagnostic Result</th>
-                <th>Option</th>  
+                <th>Dokter yang Memeriksa</th>
+                <th>Nama Pasien</th>
+                <th>Hasil Diagnosa</th>
+                <th>Opsi</th>  
             </tr>
         </thead>
         <tbody>
@@ -27,7 +28,7 @@
                     <td><%= cr.User.Profile.name %></td>
                     <td><%= cr.Desease.name %></td>
                     <td>
-                        <a href="">Details</a>
+                        <a href="/doctor/<%= doctorId %>/checkResult/<%= cr.id %>">Details</a>
                     </td>
                 </tr>
                 <% i = i + 1 %> 
