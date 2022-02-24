@@ -1,4 +1,15 @@
 const { CheckResult, User, Desease, Doctor, Profile } = require("../models/index")
+const nodemailer = require("nodemailer");
+
+let memory = {};
+let transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "testinghaloprof@gmail.com",
+    pass: "b123b123",
+  },
+});
+
 class CheckResultController {
     static showCRForDoctor(req, res) {
         let checkResults;
@@ -79,9 +90,30 @@ class CheckResultController {
     static createCR(req, res) {
         const doctorId = req.params.doctorId;
         const { patientId, deseaseId, medicine, description } = req.body;
+        // console.log(patientId)
         CheckResult.create({ doctorId, patientId, deseaseId, medicine, description })
             .then(() => {
+                return User.findByPk(patientId)
+            .then((data)=>{
+                memory.UserId = 1;
+                memory.email = data.email + ''
+                // console.log(data)
+                let mailOptions = {
+                    from: "testinghaloprof@gmail.com",
+                    to: memory.email,
+                    subject: "Halo Prof Register",
+                    text: `Terima kasih telah menggunakan jasa Halo Prof, obat yang harus anda konsumsi ${medicine}`,
+                  };
+          
+                  transporter.sendMail(mailOptions, (err, info) => {
+                    if (err) {
+                      console.log(err);
+                    } else {
+                      console.log("Email Sent:" + info.response);
+                    }
+                  });
                 res.redirect(`/doctor/${doctorId}/checkResult`)
+            })
             }).catch(err => {
                 if(err.name === "SequelizeValidationError"){
                     res.redirect(`/doctor/${doctorId}/checkResult/add?errors=${err.errors.map(e => e.message).join(";")}`)
