@@ -23,9 +23,7 @@ app.use(session({
 app.use(cookieParser());
 
 app.use("/desease", deseaseRoute);
-
-app.use(Controller.isUserAlreadyLogin);
-app.get('/', Controller.home)
+app.get('/', Controller.home);
 app.use('/', authRoute);
 
 app.use(Controller.isUserAlreadyLogin);

@@ -1,9 +1,17 @@
 class Controller{
     static home(req, res){
-        res.render('home',{
-            error:req.query.error? req.query.error : null,
-            user:req.session.user ? req.session.user : null
-        })
+        if(req.session.user){
+            if(req.session.user.role === "doctor"){
+                res.redirect(`/doctor/${user.id}/checkResult`)
+            }else{
+                res.redirect(`/user/${user.id}`)
+            }
+        }else{
+            res.render('home',{
+                error:req.query.error? req.query.error : null,
+                user: null
+            })
+        }
     }
 
     static isUserAlreadyLogin(req, res, next){

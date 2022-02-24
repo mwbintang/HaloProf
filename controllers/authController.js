@@ -96,7 +96,7 @@ class AuthController {
 		let user;
 		User.findOne({
 			where: {
-				email: username
+				username: username
 			}
 		}).then(u => {
 			if (!u) {
@@ -106,6 +106,7 @@ class AuthController {
 				return bcrypt.compare(password, user.password);
 			}
 		}).then(result => {
+			console.log(result);
 			if(result === true){
 				req.session.user = user;
 				if(user.role === "doctor"){
