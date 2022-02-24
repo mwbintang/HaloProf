@@ -16,7 +16,9 @@ module.exports = {
 		users.forEach(u => {
 			u.createdAt = new Date();
 			u.updatedAt = new Date();
-			u.password = bcrypt.hashSync('password', 10);
+			const salt = bcrypt.genSaltSync(10);
+			u.password = bcrypt.hashSync('password', salt);
+			console.log(u.password);
 		});
 		return queryInterface.bulkInsert("Users", users, {});
 	},
