@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 5000;
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const Controller = require('./controllers/index')
