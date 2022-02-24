@@ -28,5 +28,35 @@
     "lastName":"Pangestu",
     "age": 19,
     "gender": "Male"
+  },
+  {
+    "firstName": "Ketut", 
+    "lastName":"Santika",
+    "age": 40,
+    "gender": "Female"
+  },
+  {
+    "firstName": "Junia", 
+    "lastName":"Kirana",
+    "age": 50,
+    "gender": "Female"
+  },
+  {
+    "firstName": "Dimas", 
+    "lastName":"Ega",
+    "age": 56,
+    "gender": "Male"
+  },
+  {
+    "firstName": "Adisti", 
+    "lastName":"Ega",
+    "age": 45,
+    "gender": "Female"
+  },
+  {
+    "firstName": "Ega", 
+    "lastName":"Abian",
+    "age": 60,
+    "gender": "Male"
   }
 ]

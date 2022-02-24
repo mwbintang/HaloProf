@@ -3,30 +3,70 @@
     "username": "mahmud",
     "email": "mahmud@gmail.com",
     "password": "test1",
+    "role":"patient",
     "profileId": 1
   },
   {
     "username": "karina",
     "email": "karina@gmail.com",
     "password": "test2",
+    "role":"patient",
     "profileId": 2
   },
   {
     "username": "maiden",
     "email": "maiden@gmail.com",
     "password": "test3",
+    "role":"patient",
     "profileId": 3
   },
   {
     "username": "jamal",
     "email": "jamal@gmail.com",
     "password": "test4",
+    "role":"patient",
     "profileId": 4
   },
   {
     "username": "paijo",
     "email": "paijo@gmail.com",
     "password": "test5",
+    "role":"patient",
     "profileId": 5
+  },
+  {
+    "username" : "ketutSantika",
+    "email" : "ketutSantika@gmail.com",
+    "password" : "12345678",
+    "role":"doctor",
+    "profileId": 6
+  },
+  {
+    "name" : "juniaKirana",
+    "email" : "juniaKirana@gmail.com",
+    "password" : "54321",
+    "role":"doctor",
+    "profileId": 7
+  },
+  {
+    "name" : "dimasEga",
+    "email" : "dimasEga@gmail.com",
+    "password" : "123543",
+    "role":"doctor",
+    "profileId": 8
+  },
+  {
+    "name" : "adistiEga",
+    "email" : "adistiEga@gmail.com",
+    "password" : "2343233",
+    "role":"doctor",
+    "profileId": 9
+  },
+  {
+    "name" : "egaAbian",
+    "email" : "egaAbian@gmail.com",
+    "password" : "dcdfwevcwv",
+    "role":"doctor",
+    "profileId": 10
   }
 ]
