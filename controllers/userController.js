@@ -3,20 +3,27 @@ const {CheckResult,User,Desease,Doctor,Profile} = require("../models/index")
 class UserController{
     static showUserProfile(req,res){
         const id = req.params.userId;
-        User.findByPk(id, {
+        User.findOne({
             include:[{
                 model:CheckResult,
+                association: 'Patients',
                 include:[{
                     model:Desease
                 },{
-                    model:Doctor
+                    model:User,
+                    as:"Doctor",
+                    include:Profile
                 }],
-            },{
+            },
+            {
                 model:Profile
-            }]
-        }).then(user => {
-            res.render("user/profile",{user})
-        })
+            }],
+            where:{
+                id:id
+            }
+        }).then(patient => {
+            res.render("user/profile",{patient})
+        }).catch(err => console.log(err));
     }
 }
 

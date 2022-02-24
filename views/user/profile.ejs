@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>Data Lengkap Pasien</h1>
-    <h6>Nama : <%= user.Profile.name %></h6>
-    <h6>Umur : <%= user.Profile.age %></h6>
-    <h6>Gender : <%= user.Profile.gender %></h6>
+    <h6>Nama : <%= patient.Profile.name %></h6>
+    <h6>Umur : <%= patient.Profile.age %></h6>
+    <h6>Gender : <%= patient.Profile.gender %></h6>
     <h6>History Periksa : </h6> 
     <table border="1">
         <thead>
@@ -24,7 +24,7 @@
         </thead>
         <tbody>
             <% let i = 1 %> 
-            <% user.CheckResults.forEach(cr => { %>
+            <% patient.CheckResults.forEach(cr => { %>
                 <tr>
                     <td><%= i %></td>
                     <td><%= cr.formatCreatedDate %></td>
