@@ -8,17 +8,25 @@ class checkResultController{
             {
                 include:[{
                     model:User,
+                    as: "Patient",
                     include: Profile
                 },{
                     model:Desease
                 },{
-                    model:Doctor
+                    model:User,
+                    as: "Doctor",
+                    include: Profile
                 }],
                 where
             }
         ).then(cr => {
             checkResults = cr;
-            return Doctor.findAll();
+            return User.findAll({
+                include:Profile,
+                where:{
+                    role:"doctor"
+                }
+            });
         }).then(doctors=>{
             res.render("checkResult/indexDoctor",{
                 checkResults,
@@ -29,15 +37,18 @@ class checkResultController{
     }
 
     static showCRDetail(req,res){
-        const id = req.params.checkResultId;
+        const id = req.params.id;
         CheckResult.findByPk(id,{
             include:[{
                 model:User,
+                as: "Patient",
                 include: Profile
             },{
                 model:Desease
             },{
-                model:Doctor
+                model:User,
+                as: "Doctor",
+                include: Profile
             }]
         }).then(checkResult => {
             res.render("checkResult/detail",{checkResult});
@@ -46,21 +57,24 @@ class checkResultController{
 
     static showCRForm(req,res){
         const doctorId = req.params.doctorId;
-        let users;
+        let patients;
         User.findAll({
-            include:Profile
+            include:Profile,
+            where:{
+                role:"patient"
+            }
         }).then(u => {
-            users = u;
+            patients = u;
             return Desease.findAll();
         }).then(deseases => {
-            res.render("checkResult/createForm",{ users, deseases, doctorId})
-        }).catch(err => res.send(err));
+            res.render("checkResult/createForm",{ patients, deseases, doctorId})
+        }).catch(err => console.log(err));
     }
 
     static createCR(req,res){
         const doctorId = req.params.doctorId;
-        const { userId, deseaseId, medicine, description } = req.body;
-        CheckResult.create({doctorId, userId, deseaseId, medicine, description})
+        const { patientId, deseaseId, medicine, description } = req.body;
+        CheckResult.create({doctorId, patientId, deseaseId, medicine, description})
             .then(()=>{
                 res.redirect(`/doctor/${doctorId}/checkResult`)
             }).catch(err => res.send(err));

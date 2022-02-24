@@ -8,14 +8,14 @@
 </head>
 <body>
     <h1>Hasil Periksa</h1>
-    <a href="/doctor/<%= doctorId %>/checkResult">Buat Hasil Periksa Baru</a><br><br>
+    <a href="/doctor/<%= doctorId %>/checkResult/add">Buat Hasil Periksa Baru</a><br><br>
     <form action="" method="get">
         Filter :
         <a href="/doctor/<%= doctorId %>/checkResult?doctorId=<%= doctorId %>">Buatan Sendiri</a> ||
         <label>Buatan Dokter :</label>
         <select name="doctorId">
             <% doctors.forEach(d => { %>
-                <option value="<%= d.id %>"><%= d.name %></option>
+                <option value="<%= d.id %>"><%= d.Profile.name %></option>
             <% }) %>
           </select> 
         <button type="submit">Filter</button> ||
@@ -26,6 +26,7 @@
         <thead>
             <tr>
                 <th>No</th>
+                <th>Tanggal Periksa</th>
                 <th>Dokter yang Memeriksa</th>
                 <th>Nama Pasien</th>
                 <th>Hasil Diagnosa</th>
@@ -37,12 +38,14 @@
             <% checkResults.forEach(cr => { %>
                 <tr>
                     <td><%= i %></td>
-                    <td><%= cr.Doctor.name %></td>
-                    <td><a href="/doctor/<%= doctorId %>/user/<%= cr.userId %>"><%= cr.User.Profile.name %></a></td>
+                    <td><%= cr.checkupDate %></td>
+                    <td>dr. <%= cr.Doctor.Profile.name %></td>
+                    <td><a href="/doctor/<%= doctorId %>/user/<%= cr.Patient.id %>"><%= cr.Patient.Profile.name %></a></td>
                     <td><%= cr.Desease.name %></td>
                     <td>
                         <a href="/doctor/<%= doctorId %>/checkResult/<%= cr.id %>">Detail</a>
                         <% if (doctorId == cr.Doctor.id) { %>
+                            <a href="/doctor/<%= doctorId %>/checkResult/delete/<%= cr.id %>">Edit</a>
                             <a href="/doctor/<%= doctorId %>/checkResult/delete/<%= cr.id %>">Delete</a>
                         <% } %>
                     </td>

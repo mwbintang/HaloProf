@@ -8,8 +8,8 @@
 </head>
 <body border="1">
     <h1>Detail Hasil Periksa</h1>
-    <h6>Dokter yang Memeriksa : <%= checkResult.Doctor.name %></h6>
-    <h6>Nama Pasien : <%= checkResult.User.Profile.name %></h6>
+    <h6>Dokter yang Memeriksa : <%= checkResult.Doctor.Profile.name %></h6>
+    <h6>Nama Pasien : <%= checkResult.Patient.Profile.name %></h6>
     <h6>Tanggal Periksa : <%= checkResult.formatCreatedDate %></h6>
     <h6>Hasil Diagnosis : <%= checkResult.Desease.name %></h6>
     <h6>Obat : <%= checkResult.medicine %></h6>

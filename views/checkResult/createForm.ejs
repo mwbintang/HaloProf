@@ -10,9 +10,9 @@
     <h1>Buat Hasil Periksa</h1>
     <form action="/doctor/<%= doctorId %>/checkResult/add" method="post">
         <label>Nama Pasien :</label>
-        <select name="userId">
-            <% users.forEach(u => { %>
-                <option value="<%= u.id %> "><%= u.Profile.name %></option>
+        <select name="patientId">
+            <% patients.forEach(p => { %>
+                <option value="<%= p.id %> "><%= p.Profile.name %></option>
             <% }) %>
           </select><br><br>
 
