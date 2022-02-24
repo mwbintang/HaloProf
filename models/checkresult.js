@@ -24,9 +24,27 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   CheckResult.init({
-    patientId: DataTypes.INTEGER,
-    deseaseId: DataTypes.INTEGER,
-    doctorId: DataTypes.INTEGER,
+    patientId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Users',
+        key: 'id'
+      }
+    },
+    deseaseId:{
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Deseases',
+        key: 'id'
+      }
+    },
+    doctorId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Users',
+        key: 'id'
+      }
+    },
     medicine: DataTypes.STRING,
     description: DataTypes.TEXT
   }, {
