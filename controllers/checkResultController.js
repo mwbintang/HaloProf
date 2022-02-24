@@ -1,5 +1,5 @@
 const {CheckResult,User,Desease,Doctor,Profile} = require("../models/index")
-class checkResultController{
+class CheckResultController{
     static showCRForDoctor(req,res){
         let checkResults;
         const doctorId = req.params.doctorId;
@@ -95,4 +95,4 @@ class checkResultController{
 
 }
 
-module.exports = checkResultController;
+module.exports = CheckResultController;

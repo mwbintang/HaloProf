@@ -1,6 +1,6 @@
 const {checkResult, Desease, Profile, Symptom, User} = require('../models')
 
-class deseaseController{
+class DeseaseController{
     static deseaseList(req, res){
         Desease.findAll({include:Symptom})
             .then(result=>{
@@ -12,4 +12,4 @@ class deseaseController{
     }
 }
 
-module.exports = deseaseController;
+module.exports = DeseaseController;

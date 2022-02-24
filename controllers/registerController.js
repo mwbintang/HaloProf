@@ -1,7 +1,7 @@
 const {User, Profile} = require('../models')
 const bcrypt = require('bcrypt')
 
-class registerController{
+class RegisterController{
     static registerAdd(req, res){
         res.render('register')
     }
@@ -38,4 +38,4 @@ class registerController{
     }
 }
 
-module.exports = registerController;
+module.exports = RegisterController;
