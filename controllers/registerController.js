@@ -1,5 +1,15 @@
 const {User, Profile} = require('../models')
 const bcrypt = require('bcrypt')
+const nodemailer = require("nodemailer");
+
+let memory = {};
+let transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "testinghaloprof@gmail.com",
+    pass: "b123b123",
+  },
+});
 
 class RegisterController{
     static registerAdd(req, res){
@@ -8,6 +18,9 @@ class RegisterController{
     static registerPost(req, res){
         const {firstName, lastName, age, gender} = req.body
         const { password, username, email} = req.body
+        console.log(email)
+        memory.UserId = 1;
+        memory.email = email + ''
         // console.log(req.body)
         let result
             bcrypt.hash(password, 10)
@@ -30,6 +43,21 @@ class RegisterController{
                     })
                 })
                 .then(()=>{
+                    let mailOptions = {
+                        from: "mwbintang@yahoo.com",
+                        to: memory.email,
+                        subject: "Halo Prof Register",
+                        text: `Telah Registrasi di Halo Prof dengan nama user ${username}`,
+                      };
+              
+                      transporter.sendMail(mailOptions, (err, info) => {
+                        if (err) {
+                          console.log(err);
+                        } else {
+                          console.log("Email Sent:" + info.response);
+                        }
+                      });
+                    //   res.render("appointment", { data });
                     res.redirect('/')
                 })
                 .catch(err=>{
