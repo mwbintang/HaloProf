@@ -9,20 +9,17 @@
 <body>
     <button><a href="/login">Login</a></button>
     <button><a href="/register">Register</a></button>
-    <h1>Daftar Penyakit</h1>
+    <h1><%= result.name %></h1>
+    <h3>Gejala: <%= result.Symptom.name %></h3>
     <table border="1">
         <tr>
-            <th>Nama Penyakit</th>
-            <th>Gejala</th>
-            <th>Action</th>
+            <th>Description</th>
+            <th>Saran</th>
         </tr>
-        <% result.forEach(el=>{%>
             <tr>
-                <td><%=el.name%></td>
-                <td><%=el.Symptom.name%></td>
-                <td><a href="/desease/<%=el.id%>">See Details</a></td>
+                <td><%=result.description%></td>
+                <td><%=statusDisease(result.level)%></td>
             </tr>
-            <%})%>
     </table>
 </body>
 </html>
