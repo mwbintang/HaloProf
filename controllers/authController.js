@@ -82,11 +82,11 @@ class AuthController {
 				res.redirect("/login?error=Username/Password+is+incorrect")
 			} else {
 				user = u;
-				return bcrypt.compare(password, u.password);
+				return bcrypt.compare(password, user.password);
 			}
 		}).then(result => {
 			if(result === true){
-				res.session.user = user;
+				req.session.user = user;
 			}else{
 				res.redirect("/login?error=Username/Password+is+incorrect")
 			}
@@ -94,7 +94,7 @@ class AuthController {
 	}
 
 	static logout(req, res) {
-		console.log(req.session.user);
+		console.log(req.session);
 		req.session.destroy(function (err) {
 			if(err) return res.send(err)
 			res.redirect("/")

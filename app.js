@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const session = require('express-session');
-const cookieParser = require('express-session');
+const cookieParser = require('cookie-parser');
 const Controller = require('./controllers')
 const doctorRoute = require("./routers/doctorRoute")
 const deseaseRoute = require("./routers/deseaseRoute")
@@ -18,7 +18,7 @@ app.use(session({
 	saveUninitialized: false,
     cookie: { secure: false }
 }));
-// app.use(cookieParser());
+app.use(cookieParser());
 
 
 
