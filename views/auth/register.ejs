@@ -36,5 +36,10 @@
 
         <button type="submit">Submit</button>
     </form>
+    <%if(error){%>
+        <%error.split(',').forEach(el=>{%>
+            <h5 style="color: red;"><%=el%></h5>
+            <%})%>
+            <%}%>
 </body>
 </html>
