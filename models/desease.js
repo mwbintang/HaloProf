@@ -18,7 +18,13 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     description: DataTypes.STRING,
     level: DataTypes.INTEGER,
-    symptomId: DataTypes.INTEGER
+    symptomId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Symptoms',
+        key: 'id'
+      }
+    }
   }, {
     sequelize,
     modelName: 'Desease',

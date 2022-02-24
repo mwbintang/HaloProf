@@ -20,7 +20,13 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     role: DataTypes.STRING,
-    profileId: DataTypes.INTEGER
+    profileId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Profiles',
+        key: 'id'
+      }
+    }
   }, {
     sequelize,
     modelName: 'User',

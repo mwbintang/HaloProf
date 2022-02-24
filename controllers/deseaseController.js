@@ -1,11 +1,11 @@
-const {checkResult, Desease_Symptomp, Desease, Doctor, Profile, Symptomp, User} = require('../models')
+const {checkResult, Desease, Profile, Symptom, User} = require('../models')
 
 class deseaseController{
     static deseaseList(req, res){
         // console.log('test')
-        Desease.findAll({include:{all: true, nested: true }})
+        Desease.findAll({include:Symptom})
             .then(result=>{
-                // console.log(result[1].Symptomps)
+                // console.log(result)
                 res.render('deseaseList', {result})
             })
             .catch(err=>{

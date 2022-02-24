@@ -20,15 +20,7 @@
                 <td><%=el.name%></td>
                 <td><%=el.description%></td>
                 <td><%=el.level%></td>
-                <% if(el.Symptomps.length === 0){%>
-                    <td>-</td>
-                    <%}else{%>
-                    <td>
-                        <%el.Symptomps.forEach(el=>{%>
-                            -<%=el.name%><br>
-                            <%})%>
-                        </td>
-                        <%}%>
+                <td><%=el.Symptom.name%></td>
             </tr>
             <%})%>
     </table>
