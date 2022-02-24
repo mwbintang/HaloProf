@@ -86,7 +86,12 @@ class AuthController {
 			}
 		}).then(result => {
 			if(result === true){
-				req.session.user = user;
+				req.session.userRole = user.role;
+				if(user.role === "doctor"){
+					res.redirect(`/doctor/${user.id}/checkResult`)
+				}else{
+					res.redirect(`/user/${user.id}`)
+				}
 			}else{
 				res.redirect("/login?error=Username/Password+is+incorrect")
 			}
@@ -94,11 +99,8 @@ class AuthController {
 	}
 
 	static logout(req, res) {
-		console.log(req.session);
-		req.session.destroy(function (err) {
-			if(err) return res.send(err)
-			res.redirect("/")
-		})
+		req.session.destroy();
+    	res.redirect('/');
 	}
 }
 

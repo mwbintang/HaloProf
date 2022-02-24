@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
-const Controller = require('./controllers')
+const Controller = require('./controllers/index')
 const doctorRoute = require("./routers/doctorRoute")
 const deseaseRoute = require("./routers/deseaseRoute")
 const authRoute = require("./routers/authRoute")
@@ -15,19 +15,24 @@ app.use(express.urlencoded({extended:true}));
 app.use(session({
 	secret: 'secret',
 	resave: false,
-	saveUninitialized: false,
-    cookie: { secure: false }
+	saveUninitialized: true,
+    cookie: { 
+        secure: false
+    }
 }));
 app.use(cookieParser());
 
 
 
 app.get('/', Controller.home)
-app.use('/', authRoute)
-
+app.use('/', authRoute);
 app.use("/desease", deseaseRoute);
-app.use("/doctor", doctorRoute);
+
+app.use(Controller.isUserAlreadyLogin);
 app.use("/user",userRoute);
+app.use(Controller.isUserADoctor);
+app.use("/doctor", doctorRoute);
+
 
 
 app.listen(port, ()=>{
